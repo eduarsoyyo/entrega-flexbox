@@ -1,0 +1,275 @@
+/* importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* reseteo de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* varibles */
+:root {
+  --rtc-primary-color: #8eadd5;
+  --rtc-background-color: #ffffff;
+  --rtc-background-color-grey: #f6f6f6;
+  --rtc-text-color: #272d38;
+  --rtc-text-color-light: #ffffff;
+  --rtc-font-family: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--rtc-font-family);
+  font-size: 18px;
+  min-height: 100vh;
+}
+/* header */
+header {
+  display: flex;
+  padding: 40px;
+  padding-left: 12%; /* he metido este padding porque no se como hacer para que "Digital Agency" este justificado a la izquierda pero con un margen siempre igual */
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+.tittle_nav {
+  width: 50%;
+  flex-grow: 1;
+  flex: 1;
+  justify-content: flex-start;
+  text-transform: uppercase;
+  font-size: 20px;
+  /* background-color: yellow; */
+}
+
+header > nav {
+  width: 50%;
+  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  /* background-color: rgb(47, 154, 255); */
+}
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  list-style: none;
+}
+
+a {
+  color: var(--rtc-text-color);
+  font-size: 18px;
+  font-weight: regular;
+  text-decoration: none;
+}
+.menu {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+/* sección hero */
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+/* izquierda */
+.info {
+  width: 30%;
+  min-width: 540px;
+  text-transform: capitalize;
+}
+
+/* derecha */
+#hero > img {
+  width: 30%;
+  max-width: 450px;
+  min-width: 450px;
+}
+
+.info > h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+.info > p {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-top: 8px;
+  line-height: 27.5px;
+}
+
+button {
+  display: flex;
+  margin-top: 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  background-color: var(--rtc-primary-color);
+  color: var(--rtc-text-color-light);
+  border: 1px solid var(--rtc-primary-color);
+}
+
+/* seccion branding & design */
+#branding {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+/* info */
+#branding .info > h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+#branding .info > p {
+  padding-right: 10px;
+}
+
+/* seccion branding & design */
+#testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: aqua; */
+}
+#testimonial > h2 {
+  font-size: 18px;
+  font-weight: 400;
+  /* background-color: burlywood; */
+}
+#testimonial > p {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 450px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  /* background-color: chartreuse; */
+}
+
+#testimonial > .grupo_cajas {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  /* background-color: burlywood; */
+  align-items: center;
+  gap: 20px;
+}
+
+#testimonial > .grupo_cajas > .caja {
+  background-color: var(--rtc-background-color-grey);
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 345px;
+  height: 334px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+#testimonial h3 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 500;
+}
+#testimonial > .grupo_cajas > .caja > p {
+  font-size: 14px;
+  font-weight: 300;
+}
+/* footer  */
+footer {
+  /* position: fixed; */
+  margin-top: 30px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+  background-color: var(--rtc-background-color-grey);
+}
+
+.enlaces_footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+ul {
+  list-style: none;
+  width: 250px;
+  font-size: 16px;
+}
+
+ul > li:first-child {
+  font-weight: bolder;
+  font-size: 18px;
+}
+footer > p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: lighter;
+}
+@media (max-width: 570px) {
+  #hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+  .enlaces_footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .tittle_nav {
+    font-size: 30px;
+    text-transform: none;
+    font-size: 14px;
+  }
+  .info {
+    width: 100%;
+    min-width: 0px;
+  }
+  .info > h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .info > p {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  header > nav {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+
+  main,
+  nav,
+  aside {
+    flex: auto;
+  }
+}
